@@ -1,0 +1,119 @@
+/* Shared styles for Ryan Feng's personal website. */
+:root {
+  --ink: #292929;
+  --muted: #616161;
+  --accent: #8b2635;
+  --line: #e2dedb;
+  --soft: #faf8f6;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.8 var(--sans); }
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+::selection { background: #f1dce0; }
+.skip-link { position: absolute; top: -80px; left: 18px; background: white; padding: 8px 14px; }
+.skip-link:focus { top: 12px; z-index: 10; }
+.site { max-width: 1080px; margin: 0 auto; padding: 48px 48px 24px; }
+.site-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 25px; padding-bottom: 22px; border-bottom: 2px solid var(--accent); }
+.brand { font: 400 40px/1.15 var(--serif); color: var(--ink); text-decoration: none; letter-spacing: -.6px; }
+.brand:hover { text-decoration: none; color: var(--accent); }
+.affiliation { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+.header-note { margin: 0 0 2px; color: var(--muted); font-size: 12px; text-align: right; }
+.main-nav { display: flex; flex-wrap: wrap; gap: 8px 27px; padding: 13px 0; border-bottom: 1px solid var(--line); margin-bottom: 38px; }
+.main-nav a { color: var(--muted); text-decoration: none; font-size: 14px; padding: 0 0 2px; }
+.main-nav a:hover { color: var(--accent); }
+.main-nav a[aria-current="page"] { color: var(--accent); box-shadow: 0 1px 0 var(--accent); }
+.page-layout { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 66px; align-items: start; }
+main { min-width: 0; }
+h1 { font: 400 34px/1.25 var(--serif); letter-spacing: -.4px; margin: 0 0 21px; }
+h2 { font: 400 25px/1.3 var(--serif); margin: 34px 0 14px; padding-bottom: 9px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 16px; line-height: 1.5; margin: 18px 0 6px; font-weight: 600; }
+p { margin: 0 0 18px; }
+strong { font-weight: 600; }
+.lead { font-size: 18px; line-height: 1.8; }
+.page-intro { color: var(--muted); }
+.eyebrow { color: var(--muted); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 10px; }
+.sidebar { position: sticky; top: 28px; padding-top: 5px; font-size: 13px; }
+.sidebar-block + .sidebar-block { margin-top: 24px; padding-top: 21px; border-top: 1px solid var(--line); }
+.sidebar p { margin-bottom: 8px; }
+.sidebar-title { font: 400 21px/1.35 var(--serif); }
+.quiet { color: var(--muted); }
+.sidebar-links { list-style: none; padding: 0; margin: 0; }
+.sidebar-links li { margin: 0 0 8px; }
+.sidebar-links a { overflow-wrap: anywhere; text-decoration: none; }
+.sidebar-links a:hover { text-decoration: underline; }
+.note { margin: 26px 0; padding: 16px 19px; border-left: 2px solid var(--accent); background: var(--soft); font-size: 14px; }
+.note p:last-child { margin-bottom: 0; }
+.explore { list-style: none; padding: 0; margin: 24px 0 0; }
+.explore li { padding: 17px 0; border-top: 1px solid var(--line); }
+.explore a { font-size: 16px; font-weight: 600; text-decoration: none; }
+.explore a:hover { text-decoration: underline; }
+.explore p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.small { font-size: 13px; color: var(--muted); }
+.entry + .entry { margin-top: 38px; }
+.entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 3px 18px; }
+.entry-header h2 { margin: 0; padding: 0; border: none; }
+.entry-date { font-size: 12px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.entry-meta { font-size: 13px; color: var(--muted); margin: 7px 0 15px; }
+.entry-list { padding-left: 21px; margin: 10px 0 19px; }
+.entry-list li { margin-bottom: 10px; padding-left: 3px; }
+.project-link { display: inline-block; font-size: 14px; margin-top: 2px; }
+.topic-list { margin: 0; }
+.topic-list dt { margin-top: 23px; font-weight: 600; }
+.topic-list dd { margin: 6px 0 0; }
+.course-list { list-style: none; padding: 0; margin: 14px 0 24px; }
+.course-list li { display: flex; gap: 17px; margin: 8px 0; font-size: 14px; }
+.course-code { flex: 0 0 86px; color: var(--muted); font-size: 12px; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.contact-options { margin: 25px 0; }
+.contact-option { border-top: 1px solid var(--line); padding: 17px 0; }
+.contact-option h2 { font: 600 15px/1.5 var(--sans); margin: 0 0 6px; padding: 0; border: 0; }
+.contact-option p { margin: 0; overflow-wrap: anywhere; }
+.site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 45px; padding: 17px 0 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.site-footer a { text-decoration: none; }
+
+@media (max-width: 850px) {
+  .site { padding: 34px 29px 22px; }
+  .page-layout { grid-template-columns: minmax(0, 1fr) 190px; gap: 35px; }
+  .header-note { display: none; }
+  .main-nav { gap: 9px 23px; }
+}
+
+@media (max-width: 650px) {
+  .site { padding: 27px 22px 20px; }
+  .brand { font-size: 34px; }
+  .affiliation { font-size: 13px; }
+  .main-nav { gap: 10px 21px; margin-bottom: 29px; }
+  .main-nav a { font-size: 13px; }
+  .page-layout { display: flex; flex-direction: column; gap: 35px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 23px; }
+  .lead { font-size: 17px; }
+  .sidebar { position: static; width: 100%; border-top: 1px solid var(--line); padding-top: 22px; }
+  .sidebar-block + .sidebar-block { margin-top: 18px; padding-top: 17px; }
+  .sidebar-links { display: flex; flex-wrap: wrap; gap: 7px 20px; }
+  .sidebar-links li { margin: 0; }
+  .entry-header { display: block; }
+  .entry-date { display: block; margin-top: 5px; }
+  .course-list li { gap: 10px; }
+  .course-code { flex-basis: 80px; }
+  .site-footer { margin-top: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media print {
+  body { color: #000; font-size: 11pt; }
+  .site { max-width: none; padding: 0; }
+  .page-layout { display: block; }
+  .main-nav, .sidebar, .skip-link, .header-note { display: none; }
+  .site-header { margin-bottom: 24px; }
+  .note { background: none; }
+  h2, h3 { break-after: avoid; }
+  .entry-header { break-after: avoid; }
+  a { color: #000; }
+}
