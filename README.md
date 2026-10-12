@@ -1,4 +1,4 @@
-# Ryan Feng — Personal Website
+# Ryan Feng - Personal Website
 
 A static personal and academic website written in HTML and CSS. There is no
 build step, package manager, framework, or JavaScript dependency.
